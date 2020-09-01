@@ -47,7 +47,9 @@ class UploadCSVControllerTest {
                         .file(multipartFile);
 
 
-        Assertions.assertThrows(NestedServletException.class ,() -> { mockMvc.perform(builder)
-                .andExpect(MockMvcResultMatchers.status().isInternalServerError());});
+        Assertions.assertThrows(NestedServletException.class, () -> {
+            mockMvc.perform(builder)
+                    .andExpect(MockMvcResultMatchers.status().isInternalServerError());
+        });
     }
 }

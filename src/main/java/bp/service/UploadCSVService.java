@@ -4,7 +4,6 @@ import bp.model.CSVHeaders;
 import bp.model.Record;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
-import org.apache.commons.csv.CSVRecord;
 import org.springframework.stereotype.Service;
 import bp.repository.RecordRepository;
 import org.springframework.web.multipart.MultipartFile;
@@ -61,6 +60,7 @@ public class UploadCSVService {
     public String getName(String name) {
         return !name.equals("") ? name : null;
     }
+
     public BufferedReader multipartToFile(MultipartFile multipart) throws IllegalStateException, IOException {
         return new BufferedReader(new InputStreamReader(multipart.getInputStream(), StandardCharsets.UTF_8));
     }

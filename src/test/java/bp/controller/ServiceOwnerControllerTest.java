@@ -44,6 +44,7 @@ class ServiceOwnerControllerTest {
                         .json("1"));
 
     }
+
     @Test
     public void shouldReturnNotFoundWhenIdNotExists() throws Exception {
         MockHttpServletRequestBuilder builder =
@@ -53,8 +54,6 @@ class ServiceOwnerControllerTest {
                 .andExpect(MockMvcResultMatchers.status().isNotFound());
 
     }
-
-
 
 
 }

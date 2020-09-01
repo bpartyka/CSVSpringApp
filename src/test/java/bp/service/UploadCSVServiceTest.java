@@ -31,11 +31,12 @@ class UploadCSVServiceTest {
         String timestamp = "1598902011588";
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX", Locale.ENGLISH);
 
-        Date resultTime = 	formatter.parse("2020-08-31T19:26:51.588+00:00");
+        Date resultTime = formatter.parse("2020-08-31T19:26:51.588+00:00");
 
         assertEquals(resultTime, uploadCSVService.getDate(timestamp));
 
     }
+
     @Test
     void shouldReturnNullValueWhenValueIsEmpty() {
 
@@ -48,7 +49,6 @@ class UploadCSVServiceTest {
     void shouldReturnTheSameValueWhenIsNotEmpty() {
         assertEquals("Name", uploadCSVService.getName("Name"));
     }
-
 
 
 }
